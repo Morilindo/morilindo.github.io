@@ -1,0 +1,14 @@
+@theme {
+    --color-text: #070450;
+    --color-background: #fffaf0;
+    --color-primary: #364072;
+    --color-primary-5: #3640720D;
+    --color-secondary: #b5c8d6;
+    --color-secondary-30: rgba(181, 200, 214, 0.3);
+    --color-accent: #f49898;
+    --color-text-dark: #cccafc;
+    --color-background-dark: #0f0a00;
+    --color-primary-dark: #8d97c9;
+    --color-secondary-dark: #2a3d4c;
+    --color-accent-dark: #660b0b;
+}
