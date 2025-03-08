@@ -411,5 +411,4 @@ FodyWeavers.xsd
 *.org*
 
 # output files
-out
 test*
