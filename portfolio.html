@@ -1,0 +1,78 @@
+<!-- index.html -->
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="frontend/js/toggle_theme.js"></script>
+    <link href="frontend/css/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="frontend/css/custom.css">
+    <link href="https://api.fontshare.com/v2/css?f[]=lora@500,600&f[]=satoshi@500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="frontend/assets/home-light.svg" media="(prefers-color-scheme: light)">
+    <link rel="icon" type="image/svg+xml" href="frontend/assets/home-dark.svg" media="(prefers-color-scheme: dark)">
+</head>
+
+<body class="theme-base">
+<nav class="nav-container">
+    <div class="nav-left">
+        <button onclick="toggleTheme()" class="theme-toggle">
+            <svg class="theme-icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"
+                 stroke-width="1">
+                <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"></path>
+                <path d="M17 4a2 2 0 0 0 2 2a2 2 0 0 0 -2 2a2 2 0 0 0 -2 -2a2 2 0 0 0 2 -2"></path>
+                <path d="M19 11h2m-1 -1v2"></path>
+            </svg>
+            <svg class="theme-icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"
+                 stroke-width="1">
+                <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+                <path d="M6 6h3.5l2.5 -2.5l2.5 2.5h3.5v3.5l2.5 2.5l-2.5 2.5v3.5h-3.5l-2.5 2.5l-2.5 -2.5h-3.5v-3.5l-2.5 -2.5l2.5 -2.5z"></path>
+            </svg>
+        </button>
+        <a href="index.html"><h1 class="nav-brand">Morilliondo</h1></a>
+    </div>
+
+    <div class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="#" class="nav-link">Posts</a>
+        <a href="#" class="nav-link">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
+                <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"></path>
+                <path d="M21 21l-6 -6"></path>
+            </svg>
+        </a>
+        <!--        <a href="#" class="nav-link">-->
+        <!--            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"-->
+        <!--                 stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">-->
+        <!--                <path d="M4 6l16 0"></path>-->
+        <!--                <path d="M4 12l16 0"></path>-->
+        <!--                <path d="M4 18l16 0"></path>-->
+        <!--            </svg>-->
+        <!--        </a>-->
+    </div>
+</nav>
+
+<main class="main-container py-10">
+    <section class="not-so-hero-section">
+        <div class="not-so-hero-text">
+            <h1>About Me</h1>
+        </div>
+    </section>
+
+        <article class="about-me">
+            <p>Hi, my name is Li Yuxiao, and I am currently a sophomore at Nanyang Technological University. </p>
+            <p>Some of my main interest areas -- or my hyperfixations are <b>Literature</b>, <b>Fantasy</b> and <b>Emacs</b>. Will there are more, but I don't want to list them all. You may find some of them in my <a href="blog.html" class="card-link">blog</a> and <a href="projects.html" class="card-link">projects</a>.</p>
+            <p>You can contact me via <a href="mailto:liyuxiao0206@gmail.com" class="card-link">my email</a>.</p>
+                <p>I'm also on other platforms: <br>
+                    For dropping a message, private message me on <a href="https://t.me/harmadil" class="card-link">Telegram</a> <br>
+                    For my open source and programming work, visit my <a href="https://github.com/Undomeno" class="card-link">GitHub profile</a> <br>
+                    For more info about my professional career, visit my <a href="https://www.linkedin.com/in/yuxiao-li-3a6468268/" class="card-link">LinkedIn profile</a>
+                    </p>
+        </article>
+    </section>
+
+</main>
+</body>
+</html>

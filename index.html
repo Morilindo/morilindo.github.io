@@ -1,95 +1,124 @@
+<!-- index.html -->
 <!doctype html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script type="text/javascript" src="frontend/js/toggle_theme.js"></script>
     <link href="frontend/css/output.css" rel="stylesheet">
-    <nav class=nav>
-        <div class=""></div>
-    </nav>
+    <link rel="stylesheet" href="frontend/css/custom.css">
+    <link href="https://api.fontshare.com/v2/css?f[]=lora@500,600&f[]=satoshi@500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="frontend/assets/home-light.svg" media="(prefers-color-scheme: light)">
+    <link rel="icon" type="image/svg+xml" href="frontend/assets/home-dark.svg" media="(prefers-color-scheme: dark)">
 </head>
 
-<body class="bg-background dark:bg-background-dark">
-<div class="flex flex-col items-center mx-auto max-w-[52.5rem] px-6 py-32 gap-16 lg:max-w-[78rem]">
-    <div class="w-full flex flex-col items-center gap-6 lg:flex-row lg:gap-12">
-        <div class="w-full *:text-text dark:*:text-text-dark">
-            <h1 class="text-2xl font-bold mb-3 xl:text-5xl">
-                Hi there ૮ฅ・ﻌ・აฅ
-            </h1>
-            <p class="text-base xl:text-2xl">
-                This is Morillindo.
-            </p>
-        </div>
-        <div class="w-full flex flex-row items-center justify-center gap-4 lg:max-w-fit lg:flex-row *:w-full *:rounded-lg *:px-5 *:py-3 *:text-base *:font-medium *:text-center *:transition *:duration-[250ms] *:ease-in-out lg:*:w-auto ">
-            <a href="#"
-               class="bg-primary dark:bg-primary-dark text-background dark:text-text-dark hover:-translate-y-1">
-                My Resume
-            </a>
-            <a href="#"
-               class="bg-secondary-30 dark:bg-secondary-dark text-text dark:text-text-dark hover:-translate-y-1">
-                Contact Me
-            </a>
-        </div>
+<body class="theme-base">
+<nav class="nav-container">
+    <div class="nav-left">
+        <button onclick="toggleTheme()" class="theme-toggle">
+            <svg class="theme-icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"
+                 stroke-width="1">
+                <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"></path>
+                <path d="M17 4a2 2 0 0 0 2 2a2 2 0 0 0 -2 2a2 2 0 0 0 -2 -2a2 2 0 0 0 2 -2"></path>
+                <path d="M19 11h2m-1 -1v2"></path>
+            </svg>
+            <svg class="theme-icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"
+                 stroke-width="1">
+                <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+                <path d="M6 6h3.5l2.5 -2.5l2.5 2.5h3.5v3.5l2.5 2.5l-2.5 2.5v3.5h-3.5l-2.5 2.5l-2.5 -2.5h-3.5v-3.5l-2.5 -2.5l2.5 -2.5z"></path>
+            </svg>
+        </button>
+        <a href="index.html"><h1 class="nav-brand">Li Yuxiao</h1></a>
     </div>
-    <div class="*:rounded-2xl w-full grid mx-auto gap-12 pt-20 text-left lg:grid-cols-3 *:col-span-1  *:transition *:duration-[300ms] *:ease-ease lg:*:w-auto">
-        <div class="bg-primary-5 dark:bg-primary-dark-5 *:px-5 *:py-2  dark:*:text-text-dark *:text-base *:text-center p-5">
-            <h4 class="mb-2 text-text text-lg font-bold lg:text-xl">
-                My Portfolio
-            </h4>
-            <p class="mb-4 text-base text-text dark:text-gray-50">
-                Current undergraduate student at Nanyang Technological University. Currently major in Computer Science and
-                Mathematics.
-            </p>
-            <a href="#"
-               class="flex gap-1 items-center font-medium text-text underline decoration-5  decoration-accent/20 dark:decoration-accent-dark hover:decoration-13 hover:-underline-offset-5 [text-decoration-skip-ink:none]">
-                Learn More
-                <div class="ml-1">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                         stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
-                        <path d="M9 11l-4 4l4 4m-4 -4h11a4 4 0 0 0 0 -8h-1"></path>
-                    </svg>
-                </div>
-            </a>
-        </div>
-        <div class="bg-primary-5 dark:bg-primary-dark-5 *:px-5 *:py-2 dark:*:text-text-dark  *:text-base *:text-center p-5">
-            <h4 class="mb-2 text-text dark:text-gray-50 text-lg font-bold lg:text-xl">
-                Experiences & Projects
-            </h4>
-            <p class="mb-4 text-base text-text dark:text-gray-50">
-                Research experiences, internships, co-curricular activities and projects. </br>
-                Area: Machine Learning and Data Analysis.
-            </p>
 
-            <a href="#"
-               class="flex gap-1 items-center font-medium text-text underline decoration-5  decoration-accent/20 dark:decoration-accent-dark hover:decoration-13 hover:-underline-offset-5 [text-decoration-skip-ink:none]">
-                Learn More
-                <div class="ml-1">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                         stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
-                        <path d="M9 11l-4 4l4 4m-4 -4h11a4 4 0 0 0 0 -8h-1"></path>
-                    </svg>
-                </div>
-            </a>
-        </div>
-        <div class="bg-primary-5 dark:bg-primary-dark-5 *:px-5 *:py-2 dark:*:text-text-dark *:text-base *:text-center p-5">
-            <h4 class="mb-2 text-text dark:text-gray-50 text-lg font-bold lg:text-xl">
-                About
-            </h4>
-            <p class="mb-4 text-base text-text dark:text-gray-50">
-                A brief introduction about me. A warehouse of half formed thoughts, over-caffeinated rabbit hole, and pigeons crushed on my window.
-            </p>
-            <a href="#"
-               class="flex gap-1 items-center font-medium text-text underline decoration-5  decoration-accent/20 dark:decoration-accent-dark hover:decoration-13 hover:-underline-offset-5 [text-decoration-skip-ink:none]">
-                Learn More
-                <div class="ml-1">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                         stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
-                        <path d="M9 11l-4 4l4 4m-4 -4h11a4 4 0 0 0 0 -8h-1"></path>
-                    </svg>
-                </div>
-            </a>
-        </div>
+    <div class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="#" class="nav-link">Posts</a>
+        <a href="#" class="nav-link">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
+                <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"></path>
+                <path d="M21 21l-6 -6"></path>
+            </svg>
+        </a>
+<!--        <a href="#" class="nav-link">-->
+<!--            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"-->
+<!--                 stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">-->
+<!--                <path d="M4 6l16 0"></path>-->
+<!--                <path d="M4 12l16 0"></path>-->
+<!--                <path d="M4 18l16 0"></path>-->
+<!--            </svg>-->
+<!--        </a>-->
     </div>
-</div>
+</nav>
+
+<main class="main-container py-25">
+    <section class="hero-section">
+        <div class="hero-text">
+            <h1>Hi there ૮ฅ・ﻌ・აฅ</h1>
+            <h2>This is Li Yuxiao.</h2>
+        </div>
+
+        <div class="hero-buttons">
+            <a href="frontend/assets/resume.pdf" class="btn-resume">My Resume</a>
+            <div class="btn-contact-group group">
+                <div class="btn-contact-surface">Contact Me</div>
+                <div class="btn-contact-icons">
+                    <a href="https://t.me/harmadil">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                             stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
+                            <path d="M15 10l-4 4l6 6l4 -16l-18 7l4 2l2 6l3 -4"></path>
+                        </svg>
+                    </a>
+                    <a href="mailto:yuxiaoli0206@gmail.com">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                             class="feather feather-mail">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                    </a>
+                    <a href="https://github.com/Undomeno">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                             class="feather feather-github">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/yuxiao-li-3a6468268/">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cards-container lg:grid-cols-3">
+        <article class="card">
+            <h4>About Me</h4>
+            <p>Current undergraduate student at Nanyang Technological University. Currently major in Computer Science
+                and
+                Mathematics.</p>
+            <a href="portfolio.html" class="card-link">Learn More</a>
+        </article>
+
+        <article class="card">
+            <h4>Experiences & Projects</h4>
+            <p> Research experiences, internships, co-curricular activities and projects. </br>
+                Area: Machine Learning and Data Analysis.</p>
+            <a href="projects.html" class="card-link">Learn More</a>
+        </article>
+
+        <article class="card">
+            <h4>Blog</h4>
+            <p>A warehouse of half formed thoughts, over-caffeinated rabbit hole, 
+                pigeons crushed on my window, and the dragonfly dried to a crisp.</p>
+            <a href="#" class="card-link">Learn More</a>
+        </article>
+    </section>
+</main>
 </body>
 </html>

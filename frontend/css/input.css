@@ -1,2 +1,160 @@
 @import "tailwindcss";
 @import "./theme.css" layer(theme);
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+    :root {
+        --color-text-base: 255, 255, 255;
+        --color-text-muted: 199, 210, 254;
+        --color-text-inverted: 79, 70, 229;
+        --color-fill: 67, 56, 202;
+        --color-button-accent: 255, 255, 255;
+        --color-button-accent-hover: 238, 242, 255;
+        --color-button-muted: 99, 102, 241;
+    }
+    .theme-swiss {
+        --color-text-base: 255, 255, 255;
+        --color-text-muted: 254, 202, 202;
+        --color-text-inverted: 220, 38, 38;
+        --color-fill: 185, 28, 28;
+        --color-button-accent: 255, 255, 255;
+        --color-button-accent-hover: 254, 242, 242;
+        --color-button-muted: 239, 68, 68;
+    }
+    .theme-neon {
+        --color-text-base: 17, 24, 2;
+        --color-text-muted: 47, 67, 6;
+        --color-text-inverted: 235, 250, 204;
+        --color-fill: 179, 255, 23;
+        --color-button-accent: 36, 52, 3;
+        --color-button-accent-hover: 55, 79, 5;
+        --color-button-muted: 212, 255, 122;
+    }
+}
+
+/* Base theme styles */
+.theme-base {
+    @apply bg-background dark:bg-background-dark text-text dark:text-text-dark;
+    font-family: 'Satoshi', sans-serif;
+}
+
+/* Navigation */
+.nav-container {
+    @apply flex items-center justify-between p-2 ml-2 mr-2 lg:px-20 border-b border-secondary/40 dark:border-secondary/20;
+}
+
+.nav-left {
+    @apply flex items-center;
+}
+
+.theme-toggle {
+    @apply h-10 w-10 rounded-lg p-2 pt-2.5 pl-3 cursor-pointer transition-colors;
+}
+
+.theme-icon-moon {
+    @apply fill-text block dark:hidden w-6 h-6;
+}
+
+.theme-icon-sun {
+    @apply fill-text-dark invisible dark:visible w-6 h-6;
+}
+
+.nav-brand {
+    @apply text-xl font-bold;
+}
+
+.nav-links {
+    @apply flex items-center space-x-4;
+}
+
+.nav-link {
+    @apply hover:text-gray-900 dark:hover:text-white transition-colors;
+}
+
+/* Main content */
+.main-container {
+    @apply flex flex-col items-center mx-auto max-w-[52.5rem] px-6 gap-10 lg:max-w-[78rem];
+}
+
+/* Hero section */
+.hero-section {
+    @apply lg:w-full flex flex-col items-center gap-6 lg:flex-row lg:gap-20 justify-between;
+}
+
+.not-so-hero-section {
+    @apply text-4xl font-bold;
+}
+
+.not-so-hero-text h1 {
+    @apply text-3xl font-bold mb-3 lg:text-4xl;
+}
+
+.hero-text h1 {
+    @apply text-4xl font-bold mb-3 lg:text-5xl;
+}
+
+.hero-text h2 {
+    @apply text-xl xl:text-2xl;
+}
+
+/* Buttons */
+.hero-buttons {
+    @apply flex flex-row items-center justify-center gap-4 lg:max-w-fit *:rounded-lg
+}
+
+.btn-resume {
+    @apply bg-primary dark:bg-primary-dark/80 text-background dark:text-text-dark px-5 py-3 rounded-lg font-medium transition-transform hover:-translate-y-1 duration-300;
+}
+
+.btn-contact-group {
+    @apply bg-secondary-30 dark:bg-secondary-dark text-text dark:text-text-dark relative cursor-pointer rounded-lg overflow-visible hover:bg-secondary/0;
+    transition: all 500ms ease-in-out;
+}
+
+.btn-contact-surface {
+    @apply inset-0 flex items-center justify-center duration-1000 group-hover:opacity-0 h-full w-full px-5 py-3;
+    transition: opacity 500ms ease-in-out;
+}
+
+.btn-contact-icons {
+    @apply absolute inset-0 flex lg:flex-col flex-row items-center justify-evenly opacity-0 duration-1000 group-hover:opacity-100 group-hover:-translate-y-[40%] min-h-[200px];
+    transition: all 700ms ease-in-out;
+}
+
+/* Cards */
+.cards-container {
+    @apply grid mx-auto gap-x-12 gap-y-8 lg:pt-20 w-full px-15 lg:px-0;
+}
+
+.card {
+    @apply flex flex-col bg-primary-5 dark:bg-primary-dark-5 *:px-5 *:py-2 p-5 rounded-2xl transition-all duration-300;
+}
+
+.card h4 {
+    @apply text-lg font-bold mb-2 lg:text-xl;
+}
+
+.card p {
+    @apply text-base mb-4;
+}
+
+.card-link {
+    @apply gap-1 items-end justify-items-end font-medium text-text dark:text-text-dark underline decoration-5  decoration-accent/20 dark:decoration-accent-dark/60 hover:decoration-13 hover:-underline-offset-5 [text-decoration-skip-ink:none];
+    margin-top: auto;
+}
+
+.about-me {
+    @apply text-2xl px-30 mb-8 py-5 text-justify;
+}
+
+.about-me p {
+    @apply mb-8;
+}
+
+/* Make bold elements look highlighted like card-link */
+.about-me b {
+    @apply font-bold text-text dark:text-text-dark bg-accent/10 dark:bg-accent-dark/20 px-1 rounded;
+}

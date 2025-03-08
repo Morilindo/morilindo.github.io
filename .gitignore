@@ -412,3 +412,4 @@ FodyWeavers.xsd
 
 # output files
 out
+test*
