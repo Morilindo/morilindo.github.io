@@ -17,8 +17,6 @@
     --text-xl--line-height: calc(1.75 / 1.25);
     --text-2xl: 1.5rem;
     --text-2xl--line-height: calc(2 / 1.5);
-    --text-3xl: 1.875rem;
-    --text-3xl--line-height: calc(2.25 / 1.875);
     --text-4xl: 2.25rem;
     --text-4xl--line-height: calc(2.5 / 2.25);
     --text-5xl: 3rem;
@@ -198,17 +196,39 @@
   }
 }
 @layer utilities {
-  .static {
-    position: static;
+  .table {
+    display: table;
+  }
+  .border-collapse {
+    border-collapse: collapse;
   }
   .transform {
     transform: var(--tw-rotate-x) var(--tw-rotate-y) var(--tw-rotate-z) var(--tw-skew-x) var(--tw-skew-y);
+  }
+  .resize {
+    resize: both;
+  }
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
   }
   .py-10 {
     padding-block: calc(var(--spacing) * 10);
   }
   .py-25 {
     padding-block: calc(var(--spacing) * 25);
+  }
+  .underline {
+    text-decoration-line: underline;
+  }
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
+  }
+  .transition {
+    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
   }
   .lg\:grid-cols-3 {
     @media (width >= 64rem) {
@@ -357,7 +377,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  gap: calc(var(--spacing) * 6);
   @media (width >= 64rem) {
     width: 100%;
   }
@@ -376,8 +395,8 @@
 }
 .not-so-hero-text h1 {
   margin-bottom: calc(var(--spacing) * 3);
-  font-size: var(--text-3xl);
-  line-height: var(--tw-leading, var(--text-3xl--line-height));
+  font-size: var(--text-2xl);
+  line-height: var(--tw-leading, var(--text-2xl--line-height));
   --tw-font-weight: var(--font-weight-bold);
   font-weight: var(--font-weight-bold);
   @media (width >= 64rem) {
@@ -512,9 +531,12 @@
   margin-inline: auto;
   display: grid;
   width: 100%;
-  column-gap: calc(var(--spacing) * 12);
+  column-gap: calc(var(--spacing) * 3);
   row-gap: calc(var(--spacing) * 8);
   padding-inline: calc(var(--spacing) * 15);
+  @media (width >= 64rem) {
+    column-gap: calc(var(--spacing) * 12);
+  }
   @media (width >= 64rem) {
     padding-inline: calc(var(--spacing) * 0);
   }
@@ -590,11 +612,14 @@
 }
 .about-me {
   margin-bottom: calc(var(--spacing) * 8);
-  padding-inline: calc(var(--spacing) * 30);
+  padding-inline: calc(var(--spacing) * 5);
   padding-block: calc(var(--spacing) * 5);
   text-align: justify;
   font-size: var(--text-2xl);
   line-height: var(--tw-leading, var(--text-2xl--line-height));
+  @media (width >= 64rem) {
+    padding-inline: calc(var(--spacing) * 30);
+  }
 }
 .about-me p {
   margin-bottom: calc(var(--spacing) * 8);
@@ -639,6 +664,11 @@
   initial-value: skewY(0);
 }
 @property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+@property --tw-outline-style {
   syntax: "*";
   inherits: false;
   initial-value: solid;

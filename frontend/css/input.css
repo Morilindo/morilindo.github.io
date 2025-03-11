@@ -81,7 +81,7 @@
 
 /* Hero section */
 .hero-section {
-    @apply lg:w-full flex flex-col items-center gap-6 lg:flex-row lg:gap-20 justify-between;
+    @apply lg:w-full flex flex-col items-center lg:flex-row lg:gap-20 justify-between;
 }
 
 .not-so-hero-section {
@@ -89,7 +89,7 @@
 }
 
 .not-so-hero-text h1 {
-    @apply text-3xl font-bold mb-3 lg:text-4xl;
+    @apply text-2xl font-bold mb-3 lg:text-4xl;
 }
 
 .hero-text h1 {
@@ -126,7 +126,7 @@
 
 /* Cards */
 .cards-container {
-    @apply grid mx-auto gap-x-12 gap-y-8 lg:pt-20 w-full px-15 lg:px-0;
+    @apply grid mx-auto gap-x-3 lg:gap-x-12 gap-y-8 lg:pt-20 w-full px-15 lg:px-0;
 }
 
 .card {
@@ -147,7 +147,7 @@
 }
 
 .about-me {
-    @apply text-2xl px-30 mb-8 py-5 text-justify;
+    @apply text-2xl px-5 lg:px-30 mb-8 py-5 text-justify;
 }
 
 .about-me p {
