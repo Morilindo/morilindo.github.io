@@ -126,7 +126,7 @@
 
 /* Cards */
 .cards-container {
-    @apply grid mx-auto gap-x-12 gap-y-8 lg:pt-20 w-full px-10 lg:px-0;
+    @apply grid mx-auto gap-x-12 gap-y-8 lg:pt-20 w-full lg:px-10 lg:px-0;
 }
 
 .card {
@@ -147,7 +147,7 @@
 }
 
 .about-me {
-    @apply text-2xl px-10 lg:px-30 mb-8 lg:py-10 text-justify;
+    @apply text-xl lg:text-2xl px-10 lg:px-30 mb-8 lg:py-10 text-justify;
 }
 
 .about-me p {
