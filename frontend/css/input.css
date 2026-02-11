@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "./theme.css" layer(theme);
+@source "../../*.html";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -38,7 +39,7 @@
 /* Base theme styles */
 .theme-base {
     @apply bg-background dark:bg-background-dark text-text dark:text-text-dark;
-    font-family: 'Satoshi', sans-serif;
+    font-family: "Satoshi", sans-serif;
 }
 
 /* Navigation */
@@ -102,11 +103,45 @@
 
 /* Buttons */
 .hero-buttons {
-    @apply flex flex-row items-center justify-center gap-4 lg:max-w-fit *:rounded-lg
+    @apply flex flex-row items-center justify-center gap-4 lg:max-w-fit *:rounded-lg;
 }
 
-.btn-resume {
-    @apply bg-primary dark:bg-primary-dark/80 text-background dark:text-text-dark px-5 py-3 rounded-lg font-medium transition-transform hover:-translate-y-1 duration-300;
+.btn-resume-group {
+    @apply bg-primary dark:bg-primary-dark/80 text-background dark:text-text-dark relative cursor-pointer rounded-lg overflow-visible;
+    transition: all 500ms ease-in-out;
+}
+
+.btn-resume-surface {
+    @apply flex items-center justify-center px-5 py-3 font-medium;
+    transition: opacity 500ms ease-in-out;
+}
+
+.group\/resume:hover .btn-resume-surface {
+    opacity: 0;
+}
+
+.btn-resume-options {
+    @apply absolute left-0 right-0 top-1/2 flex flex-col items-center gap-2 opacity-0 pointer-events-none;
+    transform: translateY(-30%);
+    transition: all 500ms ease-in-out;
+}
+
+.btn-resume-options a {
+    @apply text-background dark:text-text-dark font-medium hover:underline;
+}
+
+.btn-resume-options a:first-child {
+    margin-top: 0.6rem;
+}
+
+.btn-resume-options a:last-child {
+    margin-top: -0.6rem;
+}
+
+.group\/resume:hover .btn-resume-options {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(-60%);
 }
 
 .btn-contact-group {
@@ -120,13 +155,20 @@
 }
 
 .btn-contact-icons {
-    @apply absolute inset-0 flex lg:flex-col flex-row items-center justify-evenly opacity-0 duration-1000 group-hover:opacity-100 group-hover:-translate-y-[40%] min-h-[200px];
+    @apply absolute left-0 right-0 top-1/2 flex lg:flex-col flex-row items-center justify-evenly opacity-0 min-h-[140px] pointer-events-none;
+    transform: translateY(-20%);
     transition: all 700ms ease-in-out;
+}
+
+.btn-contact-group:hover .btn-contact-icons {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(-50%);
 }
 
 /* Cards */
 .cards-container {
-    @apply grid mx-auto gap-x-12 gap-y-8 lg:pt-20 w-full lg:px-10 lg:px-0;
+    @apply grid mx-auto gap-x-12 gap-y-8 w-full lg:px-10 lg:px-0;
 }
 
 .card {

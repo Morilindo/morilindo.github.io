@@ -63,16 +63,16 @@
         </div>
 
         <div class="hero-buttons">
-            <a href="frontend/assets/resume.pdf" class="btn-resume">My Resume</a>
+            <div class="btn-resume-group group/resume">
+                <div class="btn-resume-surface">My Resume</div>
+                <div class="btn-resume-options">
+                    <a href="frontend/assets/resume.pdf">English</a>
+                    <a href="frontend/assets/resume_zh.pdf">Chinese</a>
+                </div>
+            </div>
             <div class="btn-contact-group group">
                 <div class="btn-contact-surface">Contact Me</div>
                 <div class="btn-contact-icons">
-                    <a href="https://t.me/harmadil">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                             stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
-                            <path d="M15 10l-4 4l6 6l4 -16l-18 7l4 2l2 6l3 -4"></path>
-                        </svg>
-                    </a>
                     <a href="mailto:yuxiaoli0206@gmail.com">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -96,12 +96,10 @@
         </div>
     </section>
 
-    <section class="cards-container lg:grid-cols-3">
+    <section class="cards-container lg:grid-cols-3 lg:pt-20">
         <article class="card">
             <h4>About Me</h4>
-            <p>Current undergraduate student at Nanyang Technological University. Currently major in Computer Science
-                and
-                Mathematics.</p>
+            <p>Undergraduate at Nanyang Technological University, double majoring in Mathematical and Computer Sciences.</p>
             <a href="portfolio.html" class="card-link">Learn More</a>
         </article>
 
