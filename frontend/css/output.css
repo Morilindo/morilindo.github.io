@@ -1,4 +1,4 @@
-/*! tailwindcss v4.1.18 | MIT License | https://tailwindcss.com */
+/*! tailwindcss v4.3.3 | MIT License | https://tailwindcss.com */
 @layer properties;
 @layer theme, base, components, utilities;
 @layer theme {
@@ -202,7 +202,7 @@
     margin-top: calc(var(--spacing) * 6);
   }
   .\!mb-1 {
-    margin-bottom: calc(var(--spacing) * 1) !important;
+    margin-bottom: var(--spacing) !important;
   }
   .mb-8 {
     margin-bottom: calc(var(--spacing) * 8);
@@ -239,18 +239,14 @@
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
     transition-duration: var(--tw-duration, var(--default-transition-duration));
   }
-  .lg\:grid-cols-3 {
-    @media (width >= 64rem) {
+  @media (width >= 64rem) {
+    .lg\:grid-cols-3 {
       grid-template-columns: repeat(3, minmax(0, 1fr));
     }
-  }
-  .lg\:pt-20 {
-    @media (width >= 64rem) {
+    .lg\:pt-20 {
       padding-top: calc(var(--spacing) * 20);
     }
-  }
-  .lg\:text-4xl {
-    @media (width >= 64rem) {
+    .lg\:text-4xl {
       font-size: var(--text-4xl);
       line-height: var(--tw-leading, var(--text-4xl--line-height));
     }
@@ -418,7 +414,7 @@
     gap: calc(var(--spacing) * 20);
   }
   @media (width >= 64rem) {
-    padding-bottom: calc(var(--spacing) * 0);
+    padding-bottom: 0px;
   }
 }
 .not-so-hero-section {
@@ -504,9 +500,9 @@
 .btn-resume-options {
   pointer-events: none;
   position: absolute;
-  top: calc(1/2 * 100%);
-  right: calc(var(--spacing) * 0);
-  left: calc(var(--spacing) * 0);
+  top: calc(1 / 2 * 100%);
+  right: 0px;
+  left: 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -563,7 +559,7 @@
   transition: all 500ms ease-in-out;
 }
 .btn-contact-surface {
-  inset: calc(var(--spacing) * 0);
+  inset: 0px;
   display: flex;
   height: 100%;
   width: 100%;
@@ -583,9 +579,9 @@
 .btn-contact-icons {
   pointer-events: none;
   position: absolute;
-  top: calc(1/2 * 100%);
-  right: calc(var(--spacing) * 0);
-  left: calc(var(--spacing) * 0);
+  top: calc(1 / 2 * 100%);
+  right: 0px;
+  left: 0px;
   display: flex;
   min-height: 140px;
   flex-direction: row;
@@ -610,7 +606,7 @@
   column-gap: calc(var(--spacing) * 12);
   row-gap: calc(var(--spacing) * 8);
   @media (width >= 64rem) {
-    padding-inline: calc(var(--spacing) * 0);
+    padding-inline: 0px;
   }
   @media (width >= 64rem) {
     padding-inline: calc(var(--spacing) * 10);
@@ -656,7 +652,7 @@
 .card-link {
   align-items: flex-end;
   justify-items: end;
-  gap: calc(var(--spacing) * 1);
+  gap: var(--spacing);
   --tw-font-weight: var(--font-weight-medium);
   font-weight: var(--font-weight-medium);
   color: var(--color-text);
@@ -714,7 +710,7 @@
   @supports (color: color-mix(in lab, red, red)) {
     background-color: color-mix(in oklab, var(--color-accent) 10%, transparent);
   }
-  padding-inline: calc(var(--spacing) * 1);
+  padding-inline: var(--spacing);
   --tw-font-weight: var(--font-weight-bold);
   font-weight: var(--font-weight-bold);
   color: var(--color-text);
