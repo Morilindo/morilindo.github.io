@@ -1,0 +1,105 @@
+<!-- blog.html -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>null</title>
+    <script type="text/javascript" src="frontend/js/toggle_theme.js"></script>
+    <link href="frontend/css/output.css" rel="stylesheet" />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=lora@500,600&f[]=satoshi@500&f[]=switzer@200,201&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="frontend/assets/home-light.svg"
+      media="(prefers-color-scheme: light)"
+    />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="frontend/assets/home-dark.svg"
+      media="(prefers-color-scheme: dark)"
+    />
+  </head>
+
+  <body class="theme-base">
+    <nav class="nav-container">
+      <div class="nav-left">
+        <button onclick="toggleTheme()" class="theme-toggle">
+          <svg
+            class="theme-icon-moon"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            width="24"
+            height="24"
+            stroke-width="1"
+          >
+            <path
+              d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"
+            ></path>
+            <path
+              d="M17 4a2 2 0 0 0 2 2a2 2 0 0 0 -2 2a2 2 0 0 0 -2 -2a2 2 0 0 0 2 -2"
+            ></path>
+            <path d="M19 11h2m-1 -1v2"></path>
+          </svg>
+          <svg
+            class="theme-icon-sun"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            width="24"
+            height="24"
+            stroke-width="1"
+          >
+            <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+            <path
+              d="M6 6h3.5l2.5 -2.5l2.5 2.5h3.5v3.5l2.5 2.5l-2.5 2.5v3.5h-3.5l-2.5 2.5l-2.5 -2.5h-3.5v-3.5l-2.5 -2.5l2.5 -2.5z"
+            ></path>
+          </svg>
+        </button>
+        <a href="index.html"><h1 class="nav-brand">Li Yuxiao</h1></a>
+      </div>
+
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="#" class="nav-link">Posts</a>
+      </div>
+    </nav>
+
+    <main class="main-container">
+      <section class="null-space">
+        <svg
+          class="null-space-glyph"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 80 80"
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-width="4"
+          aria-label="empty set"
+        >
+          <ellipse cx="40" cy="40" rx="27" ry="26"></ellipse>
+          <path d="M62 6L18 74"></path>
+        </svg>
+        <h1>You've entered null space, at least for now...</h1>
+        <div class="null-space-bottom">
+          <blockquote class="null-space-quote">
+            <p>Me apasiona el hoy pero siempre desde el ayer.</p>
+            <cite>— Julio Cortázar</cite>
+          </blockquote>
+          <a href="index.html" class="card-link">Back Home</a>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

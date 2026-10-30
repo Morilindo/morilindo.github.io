@@ -704,6 +704,73 @@
 .about-me p {
   margin-bottom: calc(var(--spacing) * 8);
 }
+.null-space {
+  display: grid;
+  min-height: calc(100svh - 2.75rem);
+  width: 100%;
+  grid-template-rows: 1fr auto 1fr;
+  justify-items: center;
+  padding-inline: calc(var(--spacing) * 6);
+  text-align: center;
+}
+.null-space-glyph {
+  margin-bottom: calc(var(--spacing) * 6);
+  height: calc(var(--spacing) * 12);
+  width: calc(var(--spacing) * 12);
+  align-self: flex-end;
+  color: var(--color-accent);
+  @media (width >= 64rem) {
+    height: calc(var(--spacing) * 14);
+  }
+  @media (width >= 64rem) {
+    width: calc(var(--spacing) * 14);
+  }
+  &:where(.dark, .dark *) {
+    color: var(--color-accent-dark);
+  }
+}
+.null-space h1 {
+  font-size: var(--text-3xl);
+  line-height: var(--tw-leading, var(--text-3xl--line-height));
+  --tw-font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-bold);
+  @media (width >= 64rem) {
+    font-size: var(--text-4xl);
+    line-height: var(--tw-leading, var(--text-4xl--line-height));
+  }
+}
+.null-space-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: calc(var(--spacing) * 6);
+  padding-bottom: calc(var(--spacing) * 10);
+}
+.null-space-quote {
+  font-family: "Switzer", sans-serif;
+  font-size: var(--text-2xl);
+  line-height: var(--tw-leading, var(--text-2xl--line-height));
+  --tw-font-weight: 200;
+  font-weight: 200;
+  font-style: italic;
+  opacity: 30%;
+  @media (width >= 64rem) {
+    font-size: var(--text-3xl);
+    line-height: var(--tw-leading, var(--text-3xl--line-height));
+  }
+}
+.null-space-quote cite {
+  margin-top: calc(var(--spacing) * 3);
+  display: block;
+  font-size: var(--text-lg);
+  line-height: var(--tw-leading, var(--text-lg--line-height));
+  font-style: normal;
+  @media (width >= 64rem) {
+    font-size: var(--text-xl);
+    line-height: var(--tw-leading, var(--text-xl--line-height));
+  }
+}
 .about-me b {
   border-radius: 0.25rem;
   background-color: color-mix(in srgb, #f49898 10%, transparent);
