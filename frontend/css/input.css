@@ -196,13 +196,12 @@
     @apply mb-8;
 }
 
-/* Null space (blog placeholder): glyph | heading (centred) | quote + link */
 .null-space {
-    @apply grid grid-rows-[1fr_auto_1fr] justify-items-center text-center min-h-[calc(100svh-2.75rem)] w-full px-6;
+    @apply grid w-full px-6 justify-items-center pt-30;
 }
 
 .null-space-glyph {
-    @apply self-end mb-6 h-12 w-12 lg:h-14 lg:w-14 text-accent dark:text-accent-dark;
+    @apply self-end mb-6 h-20 lg:h-25 text-accent dark:text-accent-dark;
 }
 
 .null-space h1 {
@@ -210,16 +209,16 @@
 }
 
 .null-space-bottom {
-    @apply flex flex-col items-center justify-end gap-6 pb-10;
+    @apply flex flex-col items-center justify-end gap-6 pb-80 pt-30;
 }
 
 .null-space-quote {
     font-family: "Switzer", sans-serif;
-    @apply text-2xl font-extralight italic opacity-30 lg:text-3xl;
+    @apply text-2xl font-extralight italic opacity-40 lg:text-3xl;
 }
 
 .null-space-quote cite {
-    @apply block mt-3 text-lg not-italic lg:text-xl;
+    @apply block mt-3 text-lg not-italic lg:text-xl text-right;
 }
 
 /* Make bold elements look highlighted like card-link */
