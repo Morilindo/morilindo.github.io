@@ -199,6 +199,9 @@
   }
 }
 @layer utilities {
+  .relative {
+    position: relative;
+  }
   .mt-6 {
     margin-top: calc(var(--spacing) * 6);
   }
@@ -207,6 +210,9 @@
   }
   .mb-8 {
     margin-bottom: calc(var(--spacing) * 8);
+  }
+  .block {
+    display: block;
   }
   .w-full {
     width: 100%;
@@ -358,12 +364,16 @@
   font-weight: var(--font-weight-bold);
 }
 .nav-links {
+  margin-right: calc(var(--spacing) * 5);
   display: flex;
   align-items: center;
   :where(& > :not(:last-child)) {
     --tw-space-x-reverse: 0;
     margin-inline-start: calc(calc(var(--spacing) * 4) * var(--tw-space-x-reverse));
     margin-inline-end: calc(calc(var(--spacing) * 4) * calc(1 - var(--tw-space-x-reverse)));
+  }
+  @media (width >= 64rem) {
+    margin-right: calc(var(--spacing) * 10);
   }
 }
 .nav-link {
@@ -745,6 +755,7 @@
 }
 .null-space-quote {
   font-family: "Switzer", sans-serif;
+  padding-top: calc(var(--spacing) * 5);
   font-size: var(--text-2xl);
   line-height: var(--tw-leading, var(--text-2xl--line-height));
   --tw-font-weight: var(--font-weight-extralight);

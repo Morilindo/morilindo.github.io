@@ -68,7 +68,7 @@
 }
 
 .nav-links {
-    @apply flex items-center space-x-4;
+    @apply flex items-center space-x-4 mr-5 lg:mr-10;
 }
 
 .nav-link {
@@ -214,7 +214,7 @@
 
 .null-space-quote {
     font-family: "Switzer", sans-serif;
-    @apply text-2xl font-extralight italic opacity-40 lg:text-3xl;
+    @apply text-2xl font-extralight italic opacity-40 lg:text-3xl pt-5;
 }
 
 .null-space-quote cite {

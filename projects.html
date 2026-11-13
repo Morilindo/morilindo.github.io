@@ -72,23 +72,7 @@
 
       <div class="nav-links">
         <a href="index.html" class="nav-link">Home</a>
-        <a href="#" class="nav-link">Posts</a>
-        <a href="#" class="nav-link">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            width="24"
-            height="24"
-            stroke-width="2"
-          >
-            <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"></path>
-            <path d="M21 21l-6 -6"></path>
-          </svg>
-        </a>
+        <a href="projects.html" class="nav-link">Project</a>
         <!--        <a href="#" class="nav-link">-->
         <!--            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"-->
         <!--                 stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">-->
@@ -113,33 +97,41 @@
         <section class="cards-container">
           <article class="card">
             <h4>KLASS Engineering and Solutions</h4>
-            <p class="text-sm !mb-1 opacity-70">Singapore &middot; Jan 2026 &ndash; Present</p>
+            <p class="text-sm !mb-1 opacity-70">AI &amp; Software Engineering Intern &middot; Singapore &middot; Jan 2026 &ndash; May 2026</p>
             <p>
-              Refactoring a backend system by transitioning existing code to a FastAPI framework to improve performance and maintainability. Supporting full-stack feature development, debugging, and maintenance for a chatbot application.
-            </p>
-          </article>
-
-          <article class="card">
-            <h4>URECA: VR Analysis and Feedback System</h4>
-            <p class="text-sm !mb-1 opacity-70">Singapore &middot; Aug 2025 &ndash; Present</p>
-            <p>
-              Analyzing multimodal data (e.g., eye-tracking, physiological signals) from VR simulations to evaluate user performance and provide feedback.
+              Designed and delivered a solo LangGraph-based reimbursement verification agent for receipts, invoices, and bank statements, with fuzzy merchant deduplication and a strict-to-lenient review fallback, cutting end-to-end latency from 2 minutes to 30 seconds through asynchronous parallel parsing and complexity-based model routing. Migrated retriever and data-prep microservices from OPEA to native FastAPI, decoupled the shared RAG library for cross-service reuse, and deployed containerized services with Docker and Gunicorn on PostgreSQL, S3, and Milvus. Audited an agentic document system and engineered a query rewriter that resolves relative dates into explicit ranges to fix date-filtering bugs.
             </p>
           </article>
 
           <article class="card">
             <h4>SRIT Information</h4>
-            <p class="text-sm !mb-1 opacity-70">Ningbo, China &middot; July 2025 &ndash; Aug 2025</p>
+            <p class="text-sm !mb-1 opacity-70">Intern &middot; Ningbo, China &middot; Jul 2025 &ndash; Aug 2025</p>
             <p>
-              Engineered a Model Context Protocol (MCP) server backend for a cancer diagnosis support system. Incorporated a Retrieval-Augmented Generation (RAG) model to query local diagnosis documentation, improving answer relevance by 10%.
+              Engineered a Model Context Protocol (MCP) server backend for a cancer diagnosis support system. Incorporated a Retrieval-Augmented Generation (RAG) model to query local diagnosis documentation and improve answer relevance.
+            </p>
+          </article>
+
+          <article class="card">
+            <h4>Final Year Paper: Interpretable Irregular Time-Series Modelling</h4>
+            <p class="text-sm !mb-1 opacity-70">Mentored by Lecturer Siyuan Liu, NTU &middot; Oct 2026 &ndash; Present</p>
+            <p>
+              Reviewed irregular ICU time-series literature, compared Neural ODE efficiency against time-blind baselines (e.g., GraFITi-C vs. Physiome-ODE), and established GRU-D with decay/mask mechanisms as the initial baseline. Designed a Temporal Concept Bottleneck Model (CBM) framework for ICU monitoring that maps MIMIC-IV data to instantaneous concepts and proposes an ODE-based propagation space for clinical states over irregular intervals.
+            </p>
+          </article>
+
+          <article class="card">
+            <h4>URECA: Agentic LLM System for Virtual Lab Assessment</h4>
+            <p class="text-sm !mb-1 opacity-70">Undergraduate Researcher, mentored by Prof. Kang Hao Cheong, NTU &middot; Jun 2026</p>
+            <p>
+              Developed a deterministic Python parser that reconstructs student action timelines from database session logs and resolves internal machine identifiers into readable scientific terms, keeping the reconstruction stage LLM-free and fully auditable. Engineered an LLM-based diagnosis engine to identify procedural errors, drafted a technical research paper, and presented milestones in bi-weekly seminars.
             </p>
           </article>
 
           <article class="card">
             <h4>URECA: Fake News Identification</h4>
-            <p class="text-sm !mb-1 opacity-70">Singapore &middot; Aug 2024 &ndash; June 2025</p>
+            <p class="text-sm !mb-1 opacity-70">Undergraduate Researcher, mentored by Prof. Kang Hao Cheong, NTU &middot; Aug 2024 &ndash; Jun 2025</p>
             <p>
-              Engineered a novel three-stream fake news detection model integrating BERT-BiLSTM, CNN-MHSA, and an interpretable KAN, achieving 98.4% accuracy on benchmark datasets. Authored a research paper detailing the model architecture and experimental findings.
+              Designed a three-stream hybrid PyTorch network combining Word-Level KAN, BERT-BiLSTM, and CNN-MHSA branches. Built an intrinsically explainable KAN branch that maps words to semantic profiles against 32 credibility anchor words, making word-level contributions inspectable. Achieved 98.46% accuracy on a composite dataset and authored a technical report on attention heatmaps, branch contributions, and limitations.
             </p>
           </article>
 
@@ -166,10 +158,26 @@
         <h2 class="text-3xl font-bold mb-8 mt-6 lg:text-4xl">Projects</h2>
         <section class="cards-container">
           <article class="card">
-            <h4>Course Schedule Website</h4>
-            <p class="text-sm !mb-1 opacity-70">2025</p>
+            <h4>SC3020 Database Systems Principles</h4>
+            <p class="text-sm !mb-1 opacity-70">Course Project &middot; Oct 2026 &ndash; Nov 2026</p>
             <p>
-              Architected a dynamic scheduling application with Next.js, TypeScript, and Tailwind CSS. Collaborated with a backend team for schedule generation API integration and partnered with another team by enabling calendar API exports, contributing to a platform that attracted over 2,000 unique visitors in its first month. Visit the site <a href="https://www.ntu-planner.com" target="_blank" class="card-link">here</a>.
+              Built the database execution driver with tombstone-based logical deletion that keeps record addresses stable for indexes, and cut disk I/O by grouping operations by block ID against a linear-scan baseline. Developed a query-plan comparison algorithm that aligns execution paths with LCS dynamic programming, disambiguates self-joins via Indel edit distance, normalizes SQL predicates with sqlglot, and scores discrepancies with a 0&ndash;1 difference rate.
+            </p>
+          </article>
+
+          <article class="card">
+            <h4>SC4000 Machine Learning: Writing Quality Prediction</h4>
+            <p class="text-sm !mb-1 opacity-70">Course Project &middot; Sep 2026 &ndash; Oct 2026</p>
+            <p>
+              Reconstructed masked essays from ~2,500 keystroke logs and engineered pacing and structural features, including character-level LDA and t-SNE representations. Contributed to a stacked ensemble of LightGBM, XGBoost, and CatBoost via Ridge regression with 5-fold cross-validation, reaching an RMSE of 0.5954 (0.0114 better than the LightGBM baseline).
+            </p>
+          </article>
+
+          <article class="card">
+            <h4>Course Schedule Website</h4>
+            <p class="text-sm !mb-1 opacity-70">Individual Project &middot; Jan 2025 &ndash; May 2025</p>
+            <p>
+              Architected a dynamic scheduling application with Next.js, TypeScript, and Tailwind CSS to replace manual course planning. Integrated a two-person backend team's schedule generation API and enabled calendar exports for another four-person team, contributing to a platform that attracted over 2,000 unique visitors in its first month. Visit the site <a href="https://www.ntu-planner.com" target="_blank" class="card-link">here</a>.
             </p>
           </article>
 
