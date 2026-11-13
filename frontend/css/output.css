@@ -26,6 +26,7 @@
     --text-4xl--line-height: calc(2.5 / 2.25);
     --text-5xl: 3rem;
     --text-5xl--line-height: 1;
+    --font-weight-extralight: 200;
     --font-weight-medium: 500;
     --font-weight-bold: 700;
     --radius-lg: 0.5rem;
@@ -233,11 +234,6 @@
   }
   .opacity-70 {
     opacity: 70%;
-  }
-  .transition {
-    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
-    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
-    transition-duration: var(--tw-duration, var(--default-transition-duration));
   }
   @media (width >= 64rem) {
     .lg\:grid-cols-3 {
@@ -713,11 +709,19 @@
   padding-inline: calc(var(--spacing) * 6);
   text-align: center;
 }
+.null-space-top {
+  position: relative;
+  grid-row-start: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .null-space-glyph {
+  position: absolute;
+  bottom: 100%;
   margin-bottom: calc(var(--spacing) * 6);
   height: calc(var(--spacing) * 12);
   width: calc(var(--spacing) * 12);
-  align-self: flex-end;
   color: var(--color-accent);
   @media (width >= 64rem) {
     height: calc(var(--spacing) * 14);
@@ -740,19 +744,24 @@
   }
 }
 .null-space-bottom {
+  grid-row-start: 3;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
-  gap: calc(var(--spacing) * 6);
-  padding-bottom: calc(var(--spacing) * 10);
+  align-self: flex-end;
+  padding-bottom: calc(var(--spacing) * 5);
+}
+.null-space-bottom .card-link {
+  margin-top: calc(var(--spacing) * 10);
 }
 .null-space-quote {
   font-family: "Switzer", sans-serif;
+  display: flex;
+  flex-direction: column;
   font-size: var(--text-2xl);
   line-height: var(--tw-leading, var(--text-2xl--line-height));
-  --tw-font-weight: 200;
-  font-weight: 200;
+  --tw-font-weight: var(--font-weight-extralight);
+  font-weight: var(--font-weight-extralight);
   font-style: italic;
   opacity: 30%;
   @media (width >= 64rem) {
@@ -762,7 +771,7 @@
 }
 .null-space-quote cite {
   margin-top: calc(var(--spacing) * 3);
-  display: block;
+  align-self: flex-end;
   font-size: var(--text-lg);
   line-height: var(--tw-leading, var(--text-lg--line-height));
   font-style: normal;

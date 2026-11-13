@@ -196,30 +196,43 @@
     @apply mb-8;
 }
 
-/* Null space (blog placeholder): glyph | heading (centred) | quote + link */
+/* Null space (blog placeholder): two groups.
+   Top: glyph + heading, with the heading centred on the screen (middle grid row).
+   Bottom: quote + cite (right-aligned), Back Home link near the page bottom. */
 .null-space {
     @apply grid grid-rows-[1fr_auto_1fr] justify-items-center text-center min-h-[calc(100svh-2.75rem)] w-full px-6;
 }
 
+/* Sits in the auto middle row so the h1 is the vertically centred element */
+.null-space-top {
+    @apply row-start-2 relative flex flex-col items-center;
+}
+
+/* Hangs above the h1 without affecting its centring */
 .null-space-glyph {
-    @apply self-end mb-6 h-12 w-12 lg:h-14 lg:w-14 text-accent dark:text-accent-dark;
+    @apply absolute bottom-full mb-6 h-12 w-12 lg:h-14 lg:w-14 text-accent dark:text-accent-dark;
 }
 
 .null-space h1 {
     @apply text-3xl font-bold lg:text-4xl;
 }
 
+/* Bottom row: quote, link 10 below the cite, link 5 above the page bottom */
 .null-space-bottom {
-    @apply flex flex-col items-center justify-end gap-6 pb-10;
+    @apply row-start-3 self-end flex flex-col items-center pb-5;
+}
+
+.null-space-bottom .card-link {
+    @apply mt-10;
 }
 
 .null-space-quote {
     font-family: "Switzer", sans-serif;
-    @apply text-2xl font-extralight italic opacity-30 lg:text-3xl;
+    @apply flex flex-col text-2xl font-extralight italic opacity-30 lg:text-3xl;
 }
 
 .null-space-quote cite {
-    @apply block mt-3 text-lg not-italic lg:text-xl;
+    @apply self-end mt-3 text-lg not-italic lg:text-xl;
 }
 
 /* Make bold elements look highlighted like card-link */
